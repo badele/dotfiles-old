@@ -81,5 +81,5 @@
 !URxvt.foreground: #cccccc
 !URxvt.saveLines: 9999
 !URxvt.scrollBar: false
-URxvt.font: -*-terminus-bold-r-*-*-14-*-*-*-*-*-*-*
+URxvt.font: -*-terminus-bold-r-*-*-18-*-*-*-*-*-*-*
 !-xos4-terminus-medium-r-normal--16-120-72-72-c-60-iso8859-1
