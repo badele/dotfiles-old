@@ -58,7 +58,8 @@ set guifont=Monospace\ 10
 set number                    " show numbers lines
 set ruler                     " Show the line and column number 
 set encoding=utf8             " use UTF8
-
+set ignorecase
+set showcmd
 
 " affichage des caracteres invisible
 set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
