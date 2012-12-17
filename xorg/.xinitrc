@@ -29,15 +29,15 @@ case $1 in
   wmfs)
     #exec ck-launch-session dbus-launch wmfs & wmpid=$!
     dbus-launch wmfs & wmpid=$!
-    feh --bg-fill ~/wallpaper-933751.jpg
+    #feh --bg-fill ~/wallpaper-933751.jpg
     chromium &
     xchat &
-    xdotool mousemove_relative 200 0
-    sleep $TEMPO
-    xterm  -fg white -bg black -e tty-clock -s &
-    sleep $TEMPO
-    xdotool mousemove_relative 0 200
-    xterm   -fg white -bg black &
+    #xdotool mousemove_relative 200 0
+    #sleep $TEMPO
+    #xterm  -fg white -bg black -e tty-clock -s &
+    #sleep $TEMPO
+    #xdotool mousemove_relative 0 200
+    #xterm   -fg white -bg black &
     synclient touchpadoff=1
     ;;
   *)

@@ -5,26 +5,26 @@
 
 ! Common
 
-#define S_yellow        #b58900
-#define S_orange        #cb4b16
-#define S_red           #dc322f
-#define S_magenta       #d33682
-#define S_violet        #6c71c4
-#define S_blue          #268bd2
-#define S_cyan          #2aa198
-#define S_green         #859900
+!#define S_yellow        #b58900
+!#define S_orange        #cb4b16
+!#define S_red           #dc322f
+!#define S_magenta       #d33682
+!#define S_violet        #6c71c4
+!#define S_blue          #268bd2
+!#define S_cyan          #2aa198
+!#define S_green         #859900
 
 
 ! Dark
 
-#define S_base03        #002b36
-#define S_base02        #073642
-#define S_base01        #586e75
-#define S_base00        #657b83
-#define S_base0         #839496
-#define S_base1         #93a1a1
-#define S_base2         #eee8d5
-#define S_base3         #fdf6e3
+!#define S_base03        #002b36
+!#define S_base02        #073642
+!#define S_base01        #586e75
+!#define S_base00        #657b83
+!#define S_base0         #839496
+!#define S_base1         #93a1a1
+!#define S_base2         #eee8d5
+!#define S_base3         #fdf6e3
 
 
 ! Light
@@ -44,30 +44,30 @@
 !
 ! URxvt*background:            S_base03
 
-*background:              S_base03
-*foreground:              S_base0
-*fading:                  40
-*fadeColor:               S_base03
-*cursorColor:             S_base1
-*pointerColorBackground:  S_base01
-*pointerColorForeground:  S_base1
+!*background:              S_base03
+!*foreground:              S_base0
+!*fading:                  40
+!*fadeColor:               S_base03
+!*cursorColor:             S_base1
+!*pointerColorBackground:  S_base01
+!*pointerColorForeground:  S_base1
 
-*color0:                  S_base02
-*color1:                  S_red
-*color2:                  S_green
-*color3:                  S_yellow
-*color4:                  S_blue
-*color5:                  S_magenta
-*color6:                  S_cyan
-*color7:                  S_base2
-*color9:                  S_orange
-*color8:                  S_base03
-*color10:                 S_base01
-*color11:                 S_base00
-*color12:                 S_base0
-*color13:                 S_violet
-*color14:                 S_base1
-*color15:                 S_base3
+!*color0:                  S_base02
+!*color1:                  S_red
+!*color2:                  S_green
+!*color3:                  S_yellow
+!*color4:                  S_blue
+!*color5:                  S_magenta
+!*color6:                  S_cyan
+!*color7:                  S_base2
+!*color9:                  S_orange
+!*color8:                  S_base03
+!*color10:                 S_base01
+!*color11:                 S_base00
+!*color12:                 S_base0
+!*color13:                 S_violet
+!*color14:                 S_base1
+!*color15:                 S_base3
 
 
 ! Transparency
@@ -81,5 +81,41 @@
 !URxvt.foreground: #cccccc
 !URxvt.saveLines: 9999
 !URxvt.scrollBar: false
-URxvt.font: -*-terminus-bold-r-*-*-18-*-*-*-*-*-*-*
+URxvt.font: -*-terminus-medium-r-*-*-14-*-*-*-*-*-*-*
 !-xos4-terminus-medium-r-normal--16-120-72-72-c-60-iso8859-1
+!
+!! Molokai theme
+URxvt*background: #101010
+URxvt*foreground: #d0d0d0
+URxvt*color0: #101010
+URxvt*color1: #960050
+URxvt*color2: #66aa11
+URxvt*color3: #c47f2c
+URxvt*color4: #30309b
+URxvt*color5: #7e40a5
+URxvt*color6: #3579a8
+URxvt*color7: #9999aa
+URxvt*color8: #303030
+URxvt*color9: #ff0090
+URxvt*color10: #80ff00
+URxvt*color11: #ffba68
+URxvt*color12: #5f5fee
+URxvt*color13: #bb88dd
+URxvt*color14: #4eb4fa
+URxvt*color15: #d0d0d0
+! 2 == green
+URxvt*cursorColor: 2
+
+URxvt.saveLines:         8192
+URxvt*scrollTtyOutput:   false
+URxvt*scrollWithBuffer:  true
+URxvt*scrollTtyKeypress: true
+
+URxvt.scrollBar: off
+URxvt.perl-ext-common: default,matcher
+URxvt.urlLauncher: /usr/bin/x-www-browser
+URxvt.matcher.button: 1
+URxvt.background: black
+URxvt.foreground: white
+URxvt.urgentOnBell: true
+URxvt*termName:screen-256color
