@@ -17,7 +17,10 @@ Bundle 'molokai'
 Bundle 'Tabular'                    
 Bundle 'Figlet.vim'
 Bundle 'The-NERD-tree'
-
+Bundle 'taglist.vim'
+Bundle 'comments.vim'
+Bundle 'tpope/vim-fugitive'
+"Bundle 'refactor'
 
 if $TERM !="linux" && $TERM != "xterm"
   Bundle 'godlygeek/csapprox'
@@ -61,6 +64,11 @@ set encoding=utf8             " use UTF8
 set ignorecase
 set showcmd
 
+" search
+set wrapscan " search at top afert end line
+set hls " hightlight
+
+
 " affichage des caracteres invisible
 set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
 set nolist
@@ -82,6 +90,15 @@ set autoindent
 "mouse support
 set mouse=a
 
+" taglist plugin
+let Tlist_Use_Right_Window = 1
+nnoremap <F12> :TlistToggle<CR>
 
+" nerdtree plugin
 inoremap <C-Space> <C-n>
-nmap  <C-n> :NERDTreeToggle<CR>
+nnoremap  <C-n> :NERDTreeToggle<CR>
+
+" make option
+if !exists(':MS')
+  command MS execute ':w' | execute ':make'
+endif
