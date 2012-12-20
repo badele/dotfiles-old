@@ -20,6 +20,7 @@ Bundle 'The-NERD-tree'
 Bundle 'taglist.vim'
 Bundle 'comments.vim'
 Bundle 'tpope/vim-fugitive'
+Bundle 'netrw.vim'
 "Bundle 'refactor'
 
 if $TERM !="linux" && $TERM != "xterm"
