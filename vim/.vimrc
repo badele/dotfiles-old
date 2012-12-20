@@ -75,7 +75,9 @@ set nolist
 
 " manual wraping
 set textwidth=78     " terminal width
-set colorcolumn=+1   " show color at textwith + 1
+if v:version >= 703
+  set colorcolumn=+1   " show color at textwith + 1
+endif
 set nowrap           " no wraping in visual
 set formatoptions=cq " for manual wraping
 "highlight ColorColumn ctermbg=green guibg=darkred
