@@ -95,6 +95,9 @@ let Tlist_Use_Right_Window = 1
 nnoremap <F12> :TlistToggle<CR>
 
 " nerdtree plugin
+let NERDTreeShowHidden=1
+let NERDTreeShowBookmarks=1
+let NERDTreeWinSize=30
 inoremap <C-Space> <C-n>
 nnoremap  <C-n> :NERDTreeToggle<CR>
 
