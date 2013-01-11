@@ -11,6 +11,7 @@
 (setq my:el-get-packages
       '(color-theme
         color-theme-solarized
+        pymacs
         rope
         ropemacs
         ropemode
@@ -20,7 +21,8 @@
 
 
 
-
+;;; Python
+(pymacs-load "ropemacs" "rope-")
 
 ;;; Gestionnaire de package
 ;;;(require 'package)
