@@ -9,12 +9,13 @@
     (eval-print-last-sexp)))
 
 (setq my:el-get-packages
-      '(color-theme
+      '(virtualenv
+	pymacs
+	rope
+	ropemode
+	ropemacs
+	color-theme
         color-theme-solarized
-        pymacs
-        rope
-        ropemacs
-        ropemode
         ))				
  
 (el-get 'sync my:el-get-packages)
