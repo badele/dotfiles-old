@@ -45,9 +45,8 @@
 (color-theme-solarized-dark) ;; Theme Solarizd
 (transient-mark-mode t) ;; Active/Affiche la selection, pour commenter du code avec M-;
 (show-paren-mode t) ;; Affiche les parentheses
-;;(flymake-mode t) ;; Activate flymake mode
-;;(flymake-cursor-mode t) ;; Activate flymake cursor mode
 
+ 
 ;; Completion du code
 (require 'auto-complete-config)
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
@@ -70,7 +69,9 @@
 (pymacs-load "ropemacs" "rope-")
 (setq ropemacs-enable-autoimport t)
 
-;;flymake
+;; Flymake
+(global-set-key [f8] 'flymake-goto-next-error) ;; Touche multimedia >>|
+(global-set-key [f6] 'flymake-goto-prev-error) ;; Touche multimedia |<<
 (when (load "flymake" t)
   (defun flymake-pyflakes-init ()
     (let* ((temp-file (flymake-init-create-temp-buffer-copy
@@ -79,8 +80,12 @@
                         temp-file
                         (file-name-directory buffer-file-name))))
       (list "pycheckers"  (list local-file))))
+
   (add-to-list 'flymake-allowed-file-name-masks
                '("\\.py\\'" flymake-pyflakes-init)))
+
+(add-hook 'find-file-hook 'flymake-find-file-hook)
+
 
 ;;; Indentation
 (setq-default indent-tabs-mode nil)    ; use only spaces and no tabs
