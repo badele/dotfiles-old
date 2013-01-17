@@ -1,5 +1,4 @@
-;; A package manager
-
+;; Package manageur
 
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
 
@@ -12,6 +11,7 @@
       (eval-print-last-sexp))))
 
 
+;; Liste des paquets
 (setq my:el-get-packages
       '(virtualenv
         magit
@@ -27,23 +27,28 @@
         nxhtml
         color-theme
         color-theme-solarized
+        graphviz-dot-mode
         ))				
 
 (el-get 'sync my:el-get-packages)
-                                        ;(el-get 'sync)
+;(el-get 'sync)
 
-;; Key mapping
-(global-set-key [ (control c) (control g) ] 'goto-line);; goto line function C-c C-g
+;; Redefinition des touches
+(global-set-key [ (control c) (control g) ] 'goto-line);; Aller a la ligne / C-c C-g
 
-;; Global options
-(exit-splash-screen) ;; No splash screen
+;; Options globales
+(exit-splash-screen) ;; Pas d'ecran de demarage
 (global-linum-mode t);; Numerotation des lignes
 (cua-mode t) ;; Activation des racourcis couper/copier/coller
 (yas-global-mode t)  ;; Active le mode yasnippet
-(ido-mode t) ;; Ameliore la recherche de buffer et de fichier
-(color-theme-solarized-dark) ;; Solarizd color theme
+(ido-mode t) ;; Ameliore la recherche buffer, fichier, repertoire
+(color-theme-solarized-dark) ;; Theme Solarizd
+(transient-mark-mode t) ;; Active/Affiche la selection, pour commenter du code avec M-;
+(show-paren-mode t) ;; Affiche les parentheses
+;;(flymake-mode t) ;; Activate flymake mode
+;;(flymake-cursor-mode t) ;; Activate flymake cursor mode
 
-;; code completion
+;; Completion du code
 (require 'auto-complete-config)
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
 (ac-config-default)
@@ -54,7 +59,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
-;; Pymacs
+;; Pymacs (python 2.7)
 (autoload 'pymacs-apply "pymacs")
 (autoload 'pymacs-call "pymacs")
 (autoload 'pymacs-eval "pymacs" nil t)
@@ -76,8 +81,6 @@
       (list "pycheckers"  (list local-file))))
   (add-to-list 'flymake-allowed-file-name-masks
                '("\\.py\\'" flymake-pyflakes-init)))
-
-
 
 ;;; Indentation
 (setq-default indent-tabs-mode nil)    ; use only spaces and no tabs
