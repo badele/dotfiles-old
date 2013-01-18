@@ -28,6 +28,7 @@
         color-theme
         color-theme-solarized
         graphviz-dot-mode
+        highlight-indentation
         ))				
 
 (el-get 'sync my:el-get-packages)
@@ -85,7 +86,7 @@
                '("\\.py\\'" flymake-pyflakes-init)))
 
 (add-hook 'find-file-hook 'flymake-find-file-hook)
-
+(flymake-cursor-mode t)
 
 ;;; Indentation
 (setq-default indent-tabs-mode nil)    ; use only spaces and no tabs
