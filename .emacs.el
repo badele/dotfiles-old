@@ -28,7 +28,7 @@
         color-theme
         color-theme-solarized
         graphviz-dot-mode
-        highlight-indentation
+        pkgbuild-mode
         ))				
 
 (el-get 'sync my:el-get-packages)
