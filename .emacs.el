@@ -39,24 +39,22 @@
 
 ;; Options globales
 (exit-splash-screen) ;; Pas d'ecran de demarage
-(global-linum-mode t);; Numerotation des lignes
+(global-font-lock-mode t) ;; Syntax highlighting
+(setq-default fill-column 79) ;; largeur de la zone
+(global-linum-mode t);; Numerotation des lignes à gauche du code
+(line-number-mode t);; Numerotation des lignes
+(column-number-mode t) ;; Numerotation des colonnes
 (cua-mode t) ;; Activation des racourcis couper/copier/coller
 (yas-global-mode t)  ;; Active le mode yasnippet
 (ido-mode t) ;; Ameliore la recherche buffer, fichier, repertoire
 (color-theme-solarized-dark) ;; Theme Solarizd
 (transient-mark-mode t) ;; Active/Affiche la selection, pour commenter du code avec M-;
 (show-paren-mode t) ;; Affiche les parentheses
-
  
 ;; Completion du code
 (require 'auto-complete-config)
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
 (ac-config-default)
-
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;; Python (src: www.enigmacurry.com)
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
 ;; Pymacs (python 2.7)
@@ -87,6 +85,10 @@
 
 (add-hook 'find-file-hook 'flymake-find-file-hook)
 (flymake-cursor-mode t)
+
+;; Python options
+(add-hook 'python-mode-hook 'flymake-mode)
+(add-hook 'python-mode-hook 'flymake-cursor-mode)
 
 ;;; Indentation
 (setq-default indent-tabs-mode nil)    ; use only spaces and no tabs
