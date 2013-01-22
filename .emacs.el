@@ -1,7 +1,9 @@
-;; Package manageur
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; >>> Package manager
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+;; Chargement de el-get
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
-
 (unless (require 'el-get nil 'noerror)
   (with-current-buffer
       (url-retrieve-synchronously
@@ -10,8 +12,7 @@
       (goto-char (point-max))
       (eval-print-last-sexp))))
 
-
-;; Liste des paquets
+;; Liste des paquets a installer
 (setq my:el-get-packages
       '(virtualenv
         magit
@@ -31,26 +32,39 @@
         pkgbuild-mode
         ))				
 
+;; Mise a jours des paquets
 (el-get 'sync my:el-get-packages)
-;(el-get 'sync)
 
-;; Redefinition des touches
-(global-set-key [ (control c) (control g) ] 'goto-line);; Aller a la ligne / C-c C-g
 
-;; Options globales
-(exit-splash-screen) ;; Pas d'ecran de demarage
-(tool-bar-mode -1) ;; Pas de toolbar
-(global-font-lock-mode t) ;; Syntax highlighting
-(setq-default fill-column 79) ;; largeur de la zone
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; >>> Options globales
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; Pas d'ecran de demarage
+(setq inhibit-startup-message t)
+(setq inhibit-splash-screen t)
+
+;; Pas de menu & toolbar 
+(tool-bar-mode -1) 
+(menu-bar-mode -1)
+
+;; Numerotation des lignes
 (global-linum-mode t);; Numerotation des lignes à gauche du code
 (line-number-mode t);; Numerotation des lignes
 (column-number-mode t) ;; Numerotation des colonnes
-(cua-mode t) ;; Activation des racourcis couper/copier/coller
-(yas-global-mode t)  ;; Active le mode yasnippet
-(ido-mode t) ;; Ameliore la recherche buffer, fichier, repertoire
+
+;; Mise en forme du code
+(setq-default fill-column 79) ;; largeur de la zone
+(global-font-lock-mode t) ;; Syntax highlighting
 (color-theme-solarized-dark) ;; Theme Solarizd
 
+;; Amelioration de la selection
+(cua-mode t) ;; Activation des racourcis couper/copier/coller
 (transient-mark-mode t) ;; Active/Affiche la selection, pour commenter du code avec M-;
+
+(yas-global-mode t)  ;; Active le mode yasnippet
+(ido-mode t) ;; Ameliore la recherche buffer, fichier, repertoire
+
 (show-paren-mode t) ;; Affiche les parentheses
  
 ;; Completion du code
@@ -61,6 +75,10 @@
 ;; Indentation
 (setq-default indent-tabs-mode nil)    ; use only spaces and no tabs
 (setq default-tab-width 4)
+
+;; Redefinition des touches
+(global-set-key [ (control c) (control g) ] 'goto-line);; Aller a la ligne / C-c C-g
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; >>> Python
