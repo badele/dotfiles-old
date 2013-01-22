@@ -39,6 +39,7 @@
 
 ;; Options globales
 (exit-splash-screen) ;; Pas d'ecran de demarage
+(tool-bar-mode -1) ;; Pas de toolbar
 (global-font-lock-mode t) ;; Syntax highlighting
 (setq-default fill-column 79) ;; largeur de la zone
 (global-linum-mode t);; Numerotation des lignes à gauche du code
