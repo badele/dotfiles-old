@@ -109,5 +109,5 @@
 (setq org-log-done t)
 
 (setq org-agenda-files (list "/data/document/home.org"
-                             "/data/document/work.org")
+                             "/data/document/work.org"))
 
