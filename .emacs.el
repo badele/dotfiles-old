@@ -48,6 +48,7 @@
 (yas-global-mode t)  ;; Active le mode yasnippet
 (ido-mode t) ;; Ameliore la recherche buffer, fichier, repertoire
 (color-theme-solarized-dark) ;; Theme Solarizd
+
 (transient-mark-mode t) ;; Active/Affiche la selection, pour commenter du code avec M-;
 (show-paren-mode t) ;; Affiche les parentheses
  
@@ -55,6 +56,14 @@
 (require 'auto-complete-config)
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
 (ac-config-default)
+
+;; Indentation
+(setq-default indent-tabs-mode nil)    ; use only spaces and no tabs
+(setq default-tab-width 4)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; >>> Python
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
 ;; Pymacs (python 2.7)
@@ -90,6 +99,15 @@
 (add-hook 'python-mode-hook 'flymake-mode)
 (add-hook 'python-mode-hook 'flymake-cursor-mode)
 
-;;; Indentation
-(setq-default indent-tabs-mode nil)    ; use only spaces and no tabs
-(setq default-tab-width 4)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; >>> org.mode
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
+(define-key global-map "\C-cl" 'org-store-link)
+(define-key global-map "\C-ca" 'org-agenda)
+(setq org-log-done t)
+
+(setq org-agenda-files (list "/data/document/home.org"
+                             "/data/document/work.org")
+
