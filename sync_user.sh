@@ -5,7 +5,7 @@ cd ~/dotfiles
 git pull
 
 # synchronise le depot
-rsync -avr --exclude ".git/" --exclude "sync_dotfiles.sh" . ~
+rsync -avr --exclude ".git/" --exclude "sync_dotfiles.sh" ./user/ ~
 
 source ~/.bashrc
 
