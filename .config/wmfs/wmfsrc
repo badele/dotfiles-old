@@ -88,8 +88,9 @@
       # statusline=""
   [/tag]
 
+  [tag] name = "editor" [/tag]
   [tag] name = "web" [/tag]
-  [tag] name = "divers" [/tag]
+  [tag] name = "chat" [/tag]
   [tag] name = "misc" [/tag]
 
  [tag] name = "1" [/tag]
@@ -141,6 +142,21 @@
       # name   = ""
       # theme  = "default"
 
+      tag    = 2 # 2nd tag
+      screen = 0
+
+      free       = false
+      tab        = false
+      ignore_tag = false
+  [/rule]
+[rule]
+      # use instance = "*" for a all-clients rule
+      instance = "gvim"
+
+      # role   = ""
+      # name   = ""
+      # theme  = "default"
+
       tag    = 1 # 2nd tag
       screen = 0
 
@@ -148,6 +164,24 @@
       tab        = false
       ignore_tag = false
   [/rule]
+
+
+[rule]
+      # use instance = "*" for a all-clients rule
+      instance = "xchat"
+
+      # role   = ""
+      # name   = ""
+      # theme  = "default"
+
+      tag    = 3 # 2nd tag
+      screen = 0
+
+      free       = false
+      tab        = false
+      ignore_tag = false
+  [/rule]
+
 
 [/rules]
 
@@ -199,8 +233,8 @@
   # tag function: cmd = nameofthetag
   #[key] mod = {"Super"} key = "z" func = "tag" cmd = "2" [/key]
 
-  [key] mod = {"Control"} key = "Right" func = "tag_next" [/key]
-  [key] mod = {"Control"} key = "Left"  func = "tag_prev" [/key]
+  [key] mod = {"Super"} key = "Right" func = "tag_next" [/key]
+  [key] mod = {"Super"} key = "Left"  func = "tag_prev" [/key]
 
   [key] mod = {"Control"} key = "Up"  func = "screen_next" [/key]
   [key] mod = {"Control"} key = "Down" func = "screen_prev" [/key]
