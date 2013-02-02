@@ -1,5 +1,7 @@
 #!/bin/bash
 
-yaourt -S git mercurial emacs
+source ~/bin/dotfiles.sh
+install_pkg git mercurial emacs
+
 mkvirtualenv --no-site-packages -p python2.7 emacs_p2k
-pip install  -r ~/tools/emacs_p2k_env.txt
+pip install -r ~/tools/emacs_p2k_env.txt
