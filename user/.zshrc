@@ -37,3 +37,11 @@ plugins=(git virtualenvwrapper )
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
+# # Virtualenv wrapper
+export WORKON_HOME=~/.virtualenvs
+mkdir -p $WORKON_HOME
+. virtualenvwrapper.sh
+
+if [ -d ~/.local/bin ]; then
+  export PATH=~/.local/bin:$PATH
+fi
