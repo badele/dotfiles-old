@@ -58,6 +58,12 @@
 (global-font-lock-mode t) ;; Syntax highlighting
 (color-theme-solarized-dark) ;; Theme Solarizd
 
+;; Encodage
+(prefer-coding-system 'utf-8)
+(setq coding-system-for-read 'utf-8)
+(setq coding-system-for-write 'utf-8)
+
+
 ;; Amelioration de la selection
 (cua-mode t) ;; Activation des racourcis couper/copier/coller
 (transient-mark-mode t) ;; Active/Affiche la selection, pour commenter du code avec M-;
