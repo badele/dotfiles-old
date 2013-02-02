@@ -21,17 +21,18 @@ xset +fp /usr/share/fonts/local
 xset fp rehash
 
 
-DEFAULT_SESSION=startkde
+DEFAULT_SESSION=i3
 case $1 in
   kde)
     exec startkde
     ;;
   wmfs)
     #exec ck-launch-session dbus-launch wmfs & wmpid=$!
-    dbus-launch wmfs & wmpid=$!
+    exec dbus-launch --exit-with-session dbus-launch wmfs & wmpid=$!
     #feh --bg-fill ~/wallpaper-933751.jpg
     chromium &
     xchat &
+    gvim &
     #xdotool mousemove_relative 200 0
     #sleep $TEMPO
     #xterm  -fg white -bg black -e tty-clock -s &
@@ -40,8 +41,12 @@ case $1 in
     #xterm   -fg white -bg black &
     synclient touchpadoff=1
     ;;
+  i3)
+    exec i3 -V >> /tmp/i3log 2>&1
+    ;;
   *)
-    exec dbus-launch $DEFAULT_SESSION &
+    udiskie &
+    exec dbus-launch --exit-with-session  $DEFAULT_SESSION &
     ;;
 esac
 
