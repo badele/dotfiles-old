@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# Install virtualenv
+sudo yaourt -S python-pip 
+pip install --user virtualenv
+pip install --user virtualenvwrapper
