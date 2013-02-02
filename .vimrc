@@ -18,9 +18,11 @@ Bundle 'Tabular'
 Bundle 'Figlet.vim'
 Bundle 'The-NERD-tree'
 Bundle 'taglist.vim'
+Bundle 'python.vim'
+"Bundle 'easytags.vim'
 Bundle 'comments.vim'
 Bundle 'tpope/vim-fugitive'
-Bundle 'netrw.vim'
+"Bundle 'netrw.vim'
 "Bundle 'refactor'
 
 if $TERM !="linux" && $TERM != "xterm"
@@ -104,7 +106,17 @@ let NERDTreeWinSize=30
 inoremap <C-Space> <C-n>
 nnoremap  <C-n> :NERDTreeToggle<CR>
 
+" indente/de-indente et reselectione (vim-fr z3bra)
+vnoremap < <gv
+vnoremap > >gv
+vnoremap = =gv
+
+
+" sauve
+"nnoremap <C-S> :w<cr>
+"inoremap <C-S> <ESC>:w<cr>a
+
 " make option
 if !exists(':MS')
-  command MS execute ':w' | execute ':make'
+  command MS execute ':w' | execute ':!cmake ..' | execute ':make'
 endif
