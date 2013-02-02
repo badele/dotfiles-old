@@ -1,4 +1,5 @@
 #!/bin/bash
 
+yaourt -S git mercurial
 mkvirtualenv --no-site-packages -p python2.7 emacs_p2k
 pip install  -r emacs_p2k_env.txt
