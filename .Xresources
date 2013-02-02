@@ -113,7 +113,7 @@ URxvt*scrollTtyKeypress: true
 
 URxvt.scrollBar: off
 URxvt.perl-ext-common: default,matcher
-URxvt.urlLauncher: /usr/bin/x-www-browser
+URxvt.urlLauncher: /usr/bin/chromium
 URxvt.matcher.button: 1
 URxvt.background: black
 URxvt.foreground: white
