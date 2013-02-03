@@ -5,7 +5,7 @@ cd ~/dotfiles
 git pull
 
 # synchronise le depot
-sudo rsync -navr --exclude ".git/"  ./system/ /
+sudo rsync -avr --exclude ".git/"  ./system/ /
 sudo ln -fs /usr/share/zoneinfo/Europe/Paris /etc/localtime
 
 # Locale
