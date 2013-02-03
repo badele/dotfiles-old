@@ -23,6 +23,22 @@ font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+#################################################################
+# Custom keys
+#################################################################
+
+# Lock screen
+bindsym $mod+Ctrl+l exec i3lock -c 141414
+
+# Sound
+bindsym XF86AudioRaiseVolume exec amixer -q set Master 2dB+ unmute
+bindsym XF86AudioLowerVolume exec amixer -q set Master 2dB- unmute
+bindsym XF86AudioMute exec amixer -q set Master toggle
+
+#################################################################
+#################################################################
+
+
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
 
@@ -159,8 +175,12 @@ assign [class="Gvim"] → "2: Editor"
 assign [class="Emacs"] → "2: Editor"
 assign [class="Chromium"] → "3: Web"
 assign [class="Xchat"] → "4: Misc"
-exec --no-startup-id synclient touchpadoff=1
 exec --no-startup-id feh --bg-scale ~/.i3/archlinux.png
+exec --no-startup-id wicd-client --tray
+exec --no-startup-id thunar --daemon
+exec --no-startup-id synclient touchpadoff=1
+exec --no-startup-id volumeicon
+exec --no-startup-id clipit
 exec --no-startup-id chromium
 exec --no-startup-id xchat
-for_window [class="Nautilus" instance="file_progress"] floating enable
+#for_window [class="Nautilus" instance="file_progress"] floating enable

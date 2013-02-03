@@ -1,16 +1,19 @@
 #!/bin/bash
 
-source ~/bin/dotfiles.sh
+source ~/.local/bin/dotfiles.sh
 
 # Environement X
 install_pkg xf86-input-synaptics xorg-xev rxvt 
 
 # i3 tilling
-install_pkg i3-wm i3status dmenu
+install_pkg i3-wm i3lock i3status dmenu
 
 # Autres outils
 install_pkg chromium xchat
 
 # Alternative legere
 install_pkg feh
-
+install_pkg gnome-icon-theme gvfs gvfs-smb thunar thunar-volman
+install_pkg wicd
+install_pkg clipit
+install_pkg volumeicon
