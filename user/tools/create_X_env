@@ -9,4 +9,8 @@ install_pkg xf86-input-synaptics xorg-xev rxvt
 install_pkg i3-wm i3status dmenu
 
 # Autres outils
-install_pkg chromium xchat feh
+install_pkg chromium xchat
+
+# Alternative legere
+install_pkg feh
+
