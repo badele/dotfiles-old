@@ -8,6 +8,7 @@ git pull
 sudo rsync -avr --exclude ".git/"  ./system/ /
 sudo ln -fs /usr/share/zoneinfo/Europe/Paris /etc/localtime
 
+
 # Locale
 sudo locale-gen
 

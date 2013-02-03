@@ -3,7 +3,7 @@
 source ~/.local/bin/dotfiles.sh
 
 # Environement X
-install_pkg xf86-input-synaptics xorg-xev rxvt 
+install_pkg xf86-input-synaptics xorg-xev rxvt slim slim-themes
 
 # i3 tilling
 install_pkg i3-wm i3lock i3status dmenu
@@ -17,3 +17,7 @@ install_pkg gnome-icon-theme gvfs gvfs-smb thunar thunar-volman
 install_pkg wicd
 install_pkg clipit
 install_pkg volumeicon
+
+# Active les services
+sudo systemctl enable slim.service
+sudo systemctl enable wicd.service
