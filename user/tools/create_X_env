@@ -1,6 +1,12 @@
 #!/bin/bash
 
 source ~/bin/dotfiles.sh
+
+# Environement X
 install_pkg xf86-input-synaptics xorg-xev rxvt 
-install_pkg chromium xchat feh
+
+# i3 tilling
 install_pkg i3-wm i3status dmenu
+
+# Autres outils
+install_pkg chromium xchat feh
