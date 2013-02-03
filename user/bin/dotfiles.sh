@@ -15,6 +15,6 @@ install_pkg ()
     echo "Installation de: $PKG"
 
     if [ $INSTALL -eq 1 ]; then
-        yaourt -S $PKG
+        sudo yaourt -S $PKG
     fi
 }
