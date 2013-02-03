@@ -5,7 +5,7 @@ cd ~/dotfiles
 git pull
 
 # synchronise le depot
-rsync -avr --exclude ".git/" --exclude "sync_dotfiles.sh" ./user/ ~
+rsync -avr --exclude ".git/" --exclude "**~" ~/dotfiles/user/ ~
 
 # Changement des droits
 chmod 755 ~/.local/bin/my_*
