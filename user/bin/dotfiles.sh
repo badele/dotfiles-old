@@ -9,7 +9,7 @@ install_pkg ()
         pacman -Qi $p > /dev/null
         if [ $? -eq 1 ]; then
 	        PKG="$PKG $p"
-            install=1
+            INSTALL=1
         fi
     done
     echo "Installation de: $PKG"

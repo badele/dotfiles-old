@@ -1,0 +1,4 @@
+#!/bin/bash
+
+source ~/bin/dotfiles.sh
+install_pkg xf85-input-synaptics i3-wm i3status chromium xchat feh
