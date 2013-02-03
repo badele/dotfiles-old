@@ -45,7 +45,7 @@ case $1 in
     exec i3 -V >> /tmp/i3log 2>&1
     ;;
   *)
-    udiskie &
+    #udiskie &
     exec dbus-launch --exit-with-session  $DEFAULT_SESSION &
     ;;
 esac
