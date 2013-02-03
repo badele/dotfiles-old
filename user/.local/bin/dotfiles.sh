@@ -12,9 +12,9 @@ install_pkg ()
             INSTALL=1
         fi
     done
-    echo "Installation de: $PKG"
 
     if [ $INSTALL -eq 1 ]; then
+        echo "Installation de: $PKG"
         sudo yaourt -S $PKG
     fi
 }
