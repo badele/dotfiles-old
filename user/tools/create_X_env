@@ -1,4 +1,6 @@
 #!/bin/bash
 
 source ~/bin/dotfiles.sh
-install_pkg xf86-input-synaptics i3-wm i3status chromium xchat feh
+install_pkg xf86-input-synaptics xorg-xev rxvt 
+install_pkg chromium xchat feh
+install_pkg i3-wm i3status dmenu
