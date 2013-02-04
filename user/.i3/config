@@ -28,7 +28,7 @@ floating_modifier $mod
 #################################################################
 
 # Lock screen
-bindsym $mod+Ctrl+l exec i3lock -c 141414
+bindsym control+mod1+l exec i3lock -c 141414
 
 # Sound
 bindsym XF86AudioRaiseVolume exec amixer -q set Master 2dB+ unmute

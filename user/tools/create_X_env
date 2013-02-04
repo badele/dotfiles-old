@@ -1,9 +1,9 @@
 #!/bin/bash
 
-source ~/.local/bin/dotfiles.sh
+source ~/dotfiles/system/usr/local/bin/dotfiles.sh
 
 # Environement X
-install_pkg xf86-input-synaptics xorg-xev rxvt slim slim-themes
+install_pkg xf86-input-synaptics xorg-xev xorg-xprop rxvt-unicode terminus-font slim slim-themes
 
 # i3 tilling
 install_pkg i3-wm i3lock i3status dmenu

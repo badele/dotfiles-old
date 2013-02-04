@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source ~/bin/dotfiles.sh
+source ~/dotfiles/system/usr/local/bin/dotfiles.sh
 install_pkg git mercurial emacs
 
 mkvirtualenv --no-site-packages -p python2.7 emacs_p2k
