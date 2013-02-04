@@ -1,9 +1,0 @@
-#!/bin/bash
-
-source ~/dotfiles/system/usr/local/bin/dotfiles.sh
-
-# Environement X
-install_pkg tmux
-
-
-
