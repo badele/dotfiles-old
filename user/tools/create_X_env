@@ -10,6 +10,7 @@ install_pkg i3-wm i3lock i3status dmenu
 
 # Autres outils
 install_pkg chromium xchat
+install_pkg remmina freerdp
 
 # Alternative legere
 install_pkg feh
