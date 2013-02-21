@@ -30,7 +30,7 @@ install_pkg remmina freerdp
 # Alternative legere
 install_pkg feh
 install_pkg gnome-icon-theme gvfs gvfs-smb thunar thunar-volman 
-install pkg gigolo intltool
+install pkg gigolo
 install_pkg wicd wicd-gtk
 install_pkg clipit
 install_pkg volumeicon
