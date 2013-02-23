@@ -1,7 +1,17 @@
 #!/bin/bash
 
+
+
+PKG=""
 source ~/dotfiles/system/usr/local/bin/dotfiles.sh
-install_pkg git mercurial emacs
+add_pkg git mercurial emacs
+install_pkg
+
+type mkvirtualenv >/dev/null 2>&1
+if [ $? -eq 1 ]; then
+	echo "Veuillez creer l'environement avec install_env avec dotfiles/user/tools/install_virtualenv"
+	exit
+fi
 
 mkvirtualenv --no-site-packages -p python2.7 emacs_p2k
 pip install -r ~/tools/emacs_p2k_env.txt
