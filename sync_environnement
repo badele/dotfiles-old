@@ -18,11 +18,15 @@ add_pkg tmux zsh screenfetch-git rxvt-unicode terminus-font
 # Environement X
 add_pkg xf86-input-synaptics xorg-xev xorg-xprop xorg-xrdb slim slim-themes gksu arandr
 
+# Multimedia
+add_pkg alsa-utils
+
 # i3 tilling
 add_pkg i3-wm i3lock i3status dmenu
 
 # Autres outils
-add_pkg chromium xchat
+add_pkg chromium flashplugin
+add_pkg xchat
 add_pkg remmina freerdp
 add_pkg mc
 
