@@ -1,23 +1,25 @@
 #!/bin/bash
 
-install_pkg ()
+add_pkg ()
 {
-    PKG=""
-    INSTALL=0
     for p in "$@";
     do
-        pacman -Qi $p > /dev/null
+        pacman -Qi $p >/dev/null 2>&1
         if [ $? -eq 1 ]; then
-	        if [ "$PKG" -ne ""]; then
-                PKG="$PKG "
-            fi
-            PKG="$p"
-            INSTALL=1
+	        if [ "$PKG" != "" ]; then
+                  PKG="$PKG $p"
+                else
+                  PKG="$p"
+                fi
         fi
     done
+}
 
-    if [ $INSTALL -eq 1 ]; then
+install_pkg ()
+{
+    if [ "$PKG" != "" ]; then
         echo "Installation de: yaourt -S '$PKG'"
         sudo yaourt -S $PKG
     fi
 }
+

@@ -2,11 +2,40 @@
 
 source ~/dotfiles/system/usr/local/bin/dotfiles.sh
 
+PKG=""
+DEPOT=$HOME/dotfiles
+
 # Mise a jours des sources
-git --git-dir=~dotfiles/ pull
+git --git-dir=$DEPOT/.git --work-tree=$DEPOT pull
 
 # synchronise le depot
-rsync -avr --exclude ".git/" --cvs-exclude ~/dotfiles/user/ ~/
+sudo rsync -avr --exclude ".git/"  $DEPOT/system/ /
+rsync -avr --exclude ".git/" --cvs-exclude $DEPOT/user/ ~/
+
+# Console
+add_pkg tmux zsh screenfetch-git rxvt-unicode terminus-font
+
+# Environement X
+add_pkg xf86-input-synaptics xorg-xev xorg-xprop slim slim-themes gksu arandr
+
+# i3 tilling
+add_pkg i3-wm i3lock i3status dmenu
+
+# Autres outils
+add_pkg chromium xchat
+add_pkg remmina freerdp
+add_pkg mc
+
+# Alternative legere
+add_pkg feh
+add_pkg zathura zathura-pdf-mupdf
+add_pkg gnome-icon-theme gvfs gvfs-smb thunar thunar-volman 
+add_pkg gigolo
+add_pkg wicd wicd-gtk
+add_pkg clipit
+add_pkg volumeicon
+
+install_pkg
 
 # Changement des droits
 sudo chmod 755 /usr/local/bin/my_*
@@ -14,32 +43,8 @@ sudo chmod 755 /usr/local/bin/my_*
 # Locale
 sudo locale-gen
 
-# Console
-install_pkg tmux screenfetch-git rxvt-unicode terminus-font
-
-# Environement X
-install_pkg xf86-input-synaptics xorg-xev xorg-xprop slim slim-themes
-
-# i3 tilling
-install_pkg i3-wm i3lock i3status dmenu
-
-# Autres outils
-install_pkg chromium xchat
-install_pkg remmina freerdp
-
-# Alternative legere
-install_pkg feh
-install_pkg gnome-icon-theme gvfs gvfs-smb thunar thunar-volman 
-install pkg gigolo
-install_pkg wicd wicd-gtk
-install_pkg clipit
-install_pkg volumeicon
-
 # Active les services
 sudo systemctl enable slim.service
 sudo systemctl enable wicd.service
 
-
 source ~/.bashrc
-
-
