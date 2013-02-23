@@ -16,7 +16,7 @@ rsync -avr --exclude ".git/" --cvs-exclude $DEPOT/user/ ~/
 add_pkg tmux zsh screenfetch-git rxvt-unicode terminus-font
 
 # Environement X
-add_pkg xf86-input-synaptics xorg-xev xorg-xprop slim slim-themes gksu arandr
+add_pkg xf86-input-synaptics xorg-xev xorg-xprop xorg-xrdb slim slim-themes gksu arandr
 
 # i3 tilling
 add_pkg i3-wm i3lock i3status dmenu
@@ -42,6 +42,7 @@ sudo chmod 755 /usr/local/bin/my_*
 
 # Locale
 sudo locale-gen
+sudo ln -fs /usr/share/zoneinfo/Europe/Paris /etc/localtime
 
 # Active les services
 sudo systemctl enable slim.service
