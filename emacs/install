@@ -14,4 +14,4 @@ if [ $? -eq 1 ]; then
 fi
 
 mkvirtualenv --no-site-packages -p python2.7 emacs_p2k
-pip install -r ~/tools/emacs_p2k_env.txt
+pip install -r ~/dotfiles/emacs/requirements.txt 

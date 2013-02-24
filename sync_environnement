@@ -26,18 +26,20 @@ add_pkg i3-wm i3lock i3status dmenu
 
 # Autres outils
 add_pkg chromium flashplugin
-add_pkg xchat
 add_pkg remmina freerdp
+add_pkg keepassx
+add_pkg openvpn
+add_pkg xchat
 add_pkg mc
 
 # Alternative legere
-add_pkg feh
-add_pkg zathura zathura-pdf-mupdf
 add_pkg gnome-icon-theme gvfs gvfs-smb thunar thunar-volman 
-add_pkg gigolo
+add_pkg zathura zathura-pdf-mupdf
 add_pkg wicd wicd-gtk
-add_pkg clipit
 add_pkg volumeicon
+add_pkg gigolo
+add_pkg clipit
+add_pkg feh
 
 install_pkg
 
