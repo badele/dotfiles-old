@@ -3,6 +3,6 @@
 PKG=""
 source ~/dotfiles/system/usr/local/bin/dotfiles.sh
 
-add_pkg wine wine_gecko winetricks ttf-ms-fonts
+add_pkg wine mono wine_gecko winetricks ttf-ms-fonts
 install_pkg
 
