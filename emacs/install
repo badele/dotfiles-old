@@ -7,11 +7,18 @@ source ~/dotfiles/system/usr/local/bin/dotfiles.sh
 add_pkg git mercurial emacs
 install_pkg
 
+# Test de la presence de l'outil mkvirtualenv
 type mkvirtualenv >/dev/null 2>&1
 if [ $? -eq 1 ]; then
 	echo "Veuillez creer l'environement avec install_env avec dotfiles/user/tools/install_virtualenv"
 	exit
 fi
 
+# Création de l'environement python
 mkvirtualenv --no-site-packages -p python2.7 emacs_p2k
 pip install -r ~/dotfiles/emacs/requirements.txt 
+
+# création du repertoire des backups des fichiers temporaires
+if [ ! -d ~/.emacs_backups]; then
+    mkdir ~/.emacs_backups
+fi

@@ -44,6 +44,9 @@
 (setq inhibit-startup-message t)
 (setq inhibit-splash-screen t)
 
+;; backups des fichiers temporaires
+(setq backup-directory-alist '(("." . "~/.emacs_backups")))
+
 ;; Pas de menu & toolbar 
 (tool-bar-mode -1) 
 (menu-bar-mode -1)
