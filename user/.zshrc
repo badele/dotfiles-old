@@ -35,6 +35,7 @@ ZSH_THEME="af-magic"
 plugins=(git virtualenvwrapper )
 
 source $ZSH/oh-my-zsh.sh
+unsetopt correct_all
 
 # Customize to your needs...
 # # Virtualenv wrapper
