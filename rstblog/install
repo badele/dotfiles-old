@@ -1,0 +1,12 @@
+#!/bin/bash
+
+PKG=""
+
+type mkvirtualenv >/dev/null 2>&1
+if [ $? -eq 1 ]; then
+	echo "Veuillez creer l'environement avec install_env avec dotfiles/user/tools/install_virtualenv"
+	exit
+fi
+
+mkvirtualenv --no-site-packages -p python2.7 rstblog
+pip install -r ~/dotfiles/rstblog/requirements.txt 
