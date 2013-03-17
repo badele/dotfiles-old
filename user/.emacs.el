@@ -63,9 +63,11 @@
 
 ;; Encodage
 (prefer-coding-system 'utf-8)
+(set-default-coding-systems 'utf-8)
+(set-terminal-coding-system 'utf-8)
+(set-keyboard-coding-system 'utf-8)
 (setq coding-system-for-read 'utf-8)
 (setq coding-system-for-write 'utf-8)
-
 
 ;; Amelioration de la selection
 (cua-mode t) ;; Activation des racourcis couper/copier/coller
@@ -115,7 +117,7 @@
            (local-file (file-relative-name
                         temp-file
                         (file-name-directory buffer-file-name))))
-      (list "~/.local/bin/pycheckers"  (list local-file))))
+      (list "/usr/local/bin/pycheckers"  (list local-file))))
 
   (add-to-list 'flymake-allowed-file-name-masks
                '("\\.py\\'" flymake-pyflakes-init)))

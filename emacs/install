@@ -4,7 +4,8 @@
 
 PKG=""
 source ~/dotfiles/system/usr/local/bin/dotfiles.sh
-add_pkg git mercurial emacs
+add_pkg git mercurial emacs 
+add_pkg xmlstarlet csslint-git # pour nxhtml et flymake
 install_pkg
 
 # Test de la presence de l'outil mkvirtualenv
