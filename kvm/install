@@ -1,0 +1,8 @@
+#!/bin/bash
+
+PKG=""
+source ~/dotfiles/system/usr/local/bin/dotfiles.sh
+
+add_pkg qemu-kvm virt-manager
+install_pkg
+
