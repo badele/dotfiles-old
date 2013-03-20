@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if [ "$1" == "" ]; then
+    echo "Veuillez choisir la location (work, home)"
+    return
+fi
+
 source ~/dotfiles/system/usr/local/bin/dotfiles.sh
 
 PKG=""
@@ -23,6 +28,8 @@ add_pkg alsa-utils
 
 # i3 tilling
 add_pkg i3-wm i3lock i3status dmenu
+rm ~/.i3/config
+ln -s ~/.i3/config_$1 ~/.i3/config
 
 # Autres outils
 add_pkg chromium flashplugin
