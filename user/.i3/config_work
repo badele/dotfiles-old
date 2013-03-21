@@ -179,11 +179,13 @@ bar {
 new_window pixel 1
 new_float pixel 1
 assign [class="Krdc"] → "2: RDP"
+assign [class="Remina"] → "2: RDP"
 assign [class="Gvim"] → "2: Editor"
-assign [class="Emacs"] → "2: Editor"
+assign [class="Xchat"] → "4: Misc"
+assign [class="Chromium"] → "7: Web"
 assign [class="Chromium"] → "7: Web"
 assign [class="Firefox"] → "7: Web"
-assign [class="Xchat"] → "4: Misc"
+
 exec --no-startup-id ~/.screenlayout/dual_screen_i3.sh
 exec --no-startup-id feh --bg-scale ~/.i3/archlinux.png
 exec --no-startup-id wicd-client --tray
