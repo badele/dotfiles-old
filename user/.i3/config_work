@@ -11,11 +11,6 @@
 
 set $mod Mod4
 
-workspace "1: RDP" output DVI-1
-workspace "5: Web" output DVI-0
-workspace "6: Editor" output DVI-0
-workspace "7: Term" output DVI-0
-
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below. ISO 10646 = Unicode
 font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
@@ -109,14 +104,21 @@ bindsym $mod+a focus parent
 bindsym $mod+control+Left workspace prev
 bindsym $mod+control+Right workspace next
 
+#Workspace
+workspace "1: Term" output DVI-1
+workspace "2: RDP" output DVI-1
+workspace "5: Term" output DVI-0
+workspace "6: Editor" output DVI-0
+workspace "7: Web" output DVI-0
+
 # switch to workspace
 bindsym $mod+ampersand workspace "1: Term"
 bindsym $mod+eacute workspace "2: Editor"
-bindsym $mod+quotedbl workspace "3: Web"
-bindsym $mod+apostrophe workspace "4: Misc"
-bindsym $mod+parenleft workspace 5
-bindsym $mod+minus workspace 6
-bindsym $mod+egrave workspace 7
+bindsym $mod+quotedbl workspace "3: Misc 3"
+bindsym $mod+apostrophe workspace "4: Misc 4"
+bindsym $mod+parenleft workspace ": Misc 5"
+bindsym $mod+minus workspace "6: Editor"
+bindsym $mod+egrave workspace "7: Web"
 bindsym $mod+underscore workspace 8
 bindsym $mod+ccedilla workspace 9
 bindsym $mod+agrave workspace 10
@@ -124,7 +126,7 @@ bindsym $mod+agrave workspace 10
 # move focused container to workspace
 bindsym $mod+Shift+ampersand move container to workspace "1: Term"
 bindsym $mod+Shift+eacute move container to workspace "2: Editor"
-bindsym $mod+Shift+quotedbl move container to workspace "3: Web"
+bindsym $mod+Shift+quotedbl move container to workspace "7: Web"
 bindsym $mod+Shift+apostrophe move container to workspace "4: Misc"
 bindsym $mod+Shift+5 move container to workspace 5
 bindsym $mod+Shift+minus move container to workspace 6
@@ -176,10 +178,13 @@ bar {
 #focus_follows_mouse no
 new_window pixel 1
 new_float pixel 1
+assign [class="Krdc"] → "2: RDP"
 assign [class="Gvim"] → "2: Editor"
 assign [class="Emacs"] → "2: Editor"
-assign [class="Chromium"] → "3: Web"
+assign [class="Chromium"] → "7: Web"
+assign [class="Firefox"] → "7: Web"
 assign [class="Xchat"] → "4: Misc"
+exec --no-startup-id ~/.screenlayout/dual_screen_i3.sh
 exec --no-startup-id feh --bg-scale ~/.i3/archlinux.png
 exec --no-startup-id wicd-client --tray
 exec --no-startup-id thunar --daemon
