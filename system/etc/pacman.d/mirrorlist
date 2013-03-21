@@ -146,7 +146,6 @@
 ## Score: 35.1, China
 ## Score: 36.4, China
 ## Score: 68.3, Taiwan, Province of China
-Server = http://mir1.archlinux.fr/archlinux/$repo/os/$arch
 Server = http://mir.archlinux.fr/$repo/os/$arch
 Server = http://archlinux.mirrors.ovh.net/archlinux/$repo/os/$arch
 Server = http://miroir.ezvan.fr/archlinux/$repo/os/$arch
