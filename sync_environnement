@@ -40,7 +40,7 @@ add_pkg xchat
 add_pkg mc
 
 # Alternative legere
-add_pkg gnome-icon-theme gvfs gvfs-smb thunar thunar-volman 
+add_pkg gnome-icon-theme gvfs gvfs-smb thunar thunar-volman tumbler ffmpegthumbnai
 add_pkg zathura zathura-pdf-mupdf
 add_pkg wicd wicd-gtk
 add_pkg volumeicon
