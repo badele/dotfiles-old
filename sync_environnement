@@ -27,7 +27,7 @@ add_pkg xf86-input-synaptics xorg-xev xorg-xprop xorg-xrdb slim slim-themes gksu
 add_pkg alsa-utils
 
 # i3 tilling
-add_pkg i3-git i3lock i3status dmenu
+add_pkg i3-git i3lock i3status dmenu xautolock
 rm ~/.i3/config
 ln -s ~/.i3/config_$1 ~/.i3/config
 
