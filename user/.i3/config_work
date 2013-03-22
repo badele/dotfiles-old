@@ -176,6 +176,8 @@ bar {
 
 # Bruno
 #focus_follows_mouse no
+
+bindsym $mod+Shift+s exec --no-startup-id feh --bg-scale ~/.i3/archlinux.png
 new_window pixel 1
 new_float pixel 1
 assign [class="Krdc"] → "2: RDP"
