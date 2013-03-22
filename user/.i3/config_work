@@ -116,7 +116,7 @@ bindsym $mod+ampersand workspace "1: Term"
 bindsym $mod+eacute workspace "2: Editor"
 bindsym $mod+quotedbl workspace "3: Misc 3"
 bindsym $mod+apostrophe workspace "4: Misc 4"
-bindsym $mod+parenleft workspace ": Misc 5"
+bindsym $mod+parenleft workspace "5: Misc 5"
 bindsym $mod+minus workspace "6: Editor"
 bindsym $mod+egrave workspace "7: Web"
 bindsym $mod+underscore workspace 8
