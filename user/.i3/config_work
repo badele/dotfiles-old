@@ -116,7 +116,7 @@ bindsym $mod+ampersand workspace "1: Term"
 bindsym $mod+eacute workspace "2: Editor"
 bindsym $mod+quotedbl workspace "3: Misc 3"
 bindsym $mod+apostrophe workspace "4: Misc 4"
-bindsym $mod+parenleft workspace "5: Misc 5"
+bindsym $mod+parenleft workspace "5: Term"
 bindsym $mod+minus workspace "6: Editor"
 bindsym $mod+egrave workspace "7: Web"
 bindsym $mod+underscore workspace 8
@@ -128,7 +128,7 @@ bindsym $mod+Shift+ampersand move container to workspace "1: Term"
 bindsym $mod+Shift+eacute move container to workspace "2: Editor"
 bindsym $mod+Shift+quotedbl move container to workspace "7: Web"
 bindsym $mod+Shift+apostrophe move container to workspace "4: Misc"
-bindsym $mod+Shift+5 move container to workspace 5
+bindsym $mod+Shift+5 move container to workspace "5: Term"
 bindsym $mod+Shift+minus move container to workspace 6
 bindsym $mod+Shift+egrave move container to workspace 7
 bindsym $mod+Shift+underscore move container to workspace 8
