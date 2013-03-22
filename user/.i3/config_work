@@ -181,20 +181,20 @@ new_float pixel 1
 assign [class="Krdc"] → "2: RDP"
 assign [class="Remina"] → "2: RDP"
 assign [class="Gvim"] → "2: Editor"
-assign [class="Emacs"] → "2: Editor"
+assign [class="Emacs"] → "6: Editor"
 assign [class="Xchat"] → "4: Misc"
 assign [class="Chromium"] → "7: Web"
 assign [class="Chromium"] → "7: Web"
 assign [class="Firefox"] → "7: Web"
 
-exec --no-startup-id ~/.screenlayout/dual_screen_i3.sh
-exec --no-startup-id xautolock -time 1 -locker "i3lock -c 331111"
-exec --no-startup-id feh --bg-scale ~/.i3/archlinux.png
+exec --no-startup-id ~/.screenlayout/dual_screen_work.sh
+exec --no-startup-id xautolock -time 5 -locker "i3lock -c 331111"
 exec --no-startup-id wicd-client --tray
 exec --no-startup-id thunar --daemon
 exec --no-startup-id synclient touchpadoff=1
 exec --no-startup-id volumeicon
 exec --no-startup-id clipit
 exec --no-startup-id chromium
+exec --no-startup-id feh --bg-scale ~/.i3/archlinux.png
 #exec --no-startup-id xchat
 #for_window [class="Nautilus" instance="file_progress"] floating enable
