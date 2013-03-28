@@ -58,11 +58,17 @@ if [ $? -eq 1 ]; then
     echo "Server = http://repo.archlinuxfr/$arch" >> /etc/pacman.conf
 fi
 
-
 PKG=""
 add_pkg yaourt wget git
 add_pkg net-tools
 pacman -Syu
 install_pkg
 
+# Chargement du dotfiles
+if [ ! -d ~/dotfiles ]; then
+    cd
+    git clone git@github.com:badele/dotfiles.git
+else
+    git pull
+fi
 echo "Vous pouvez maintenant utiliser sync_environnement"
