@@ -23,6 +23,30 @@ install_pkg ()
     fi
 }
 
+# Teste si un hostname a été défini
+if [ ! -f /etc/hostname ];
+    echo "archlinux-host" > /etc/hostname
+fi
+
+# Teste si la locale a été défini
+grep "^fr_FR.UTF-8" /etc/locale.gen
+if [ $? -eq 1 ]; then
+    echo "fr_FR.UTF-8" >> /etc/locale.gen
+    echo "LANG='fr_FR.UTF-8'" >> /etc/locale.conf 
+    locale-gen
+fi
+
+# Teste la keymap du pc
+if [ ! -f /etc/vconsole.conf ];
+    echo "KEYMAP=fr-pc" > /etc/vconsole.conf
+fi
+
+# Teste si le localtime a été défini
+if [ ! -h /etc/localtime ];
+    ln -s /usr/share/zoneinfo/Europe/Paris /etc/localtime
+fi
+
+# Préparation des prérequis
 if [ "$(ping -q -c1 8.8.8.8)" && "$(ping -q -c1 www.google.com)" ]; then
     echo "Veuillez vous assurer que vous ayez une connexion internet"
     return
