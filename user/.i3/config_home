@@ -182,6 +182,6 @@ exec --no-startup-id thunar --daemon
 exec --no-startup-id synclient touchpadoff=1
 exec --no-startup-id volumeicon
 exec --no-startup-id clipit
-exec --no-startup-id chromium
+exec --no-startup-id firefox
 #exec --no-startup-id xchat
 #for_window [class="Nautilus" instance="file_progress"] floating enable
