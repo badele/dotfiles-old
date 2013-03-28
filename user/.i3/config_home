@@ -173,9 +173,9 @@ new_window pixel 1
 new_float pixel 1
 assign [class="Gvim"] → "2: Editor"
 assign [class="Emacs"] → "2: Editor"
-assign [class="Chromium"] → "3: Web"
+assign [class="Firefox"] → "3: Web"
 assign [class="Xchat"] → "4: Misc"
-exec --no-startup-id xautolock -time 1 -locker "i3lock -c 331111"
+exec --no-startup-id xautolock -time 5 -locker "i3lock -c 331111"
 exec --no-startup-id feh --bg-scale ~/.i3/archlinux.png
 exec --no-startup-id wicd-client --tray
 exec --no-startup-id thunar --daemon
