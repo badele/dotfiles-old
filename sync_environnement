@@ -52,6 +52,7 @@ install_pkg
 
 # Changement des droits
 sudo chmod 755 /usr/local/bin/my_*
+sudo chow root:root /usr
 
 # Locale
 sudo locale-gen
