@@ -23,52 +23,64 @@ install_pkg ()
     fi
 }
 
-# Teste si un hostname a été défini
-if [ ! -f /etc/hostname ];
+# Teste le hostname
+if [ ! -f /etc/hostname ]; then
     echo "archlinux-host" > /etc/hostname
 fi
 
-# Teste si la locale a été défini
-grep "^fr_FR.UTF-8" /etc/locale.gen
-if [ $? -eq 1 ]; then
+# Teste la locale
+grep "^fr_FR.UTF-8" /etc/locale.gen >/dev/null 2>&1
+if [ "$?" -eq "1" ]; then
     echo "fr_FR.UTF-8" >> /etc/locale.gen
-    echo "LANG='fr_FR.UTF-8'" >> /etc/locale.conf 
+    echo "LANG='fr_FR.UTF-8'" >> /etc/locale.conf
     locale-gen
 fi
 
 # Teste la keymap du pc
-if [ ! -f /etc/vconsole.conf ];
+if [ ! -f /etc/vconsole.conf ]; then
     echo "KEYMAP=fr-pc" > /etc/vconsole.conf
 fi
 
-# Teste si le localtime a été défini
-if [ ! -h /etc/localtime ];
+# Teste le localtime
+if [ ! -h /etc/localtime ]; then
     ln -s /usr/share/zoneinfo/Europe/Paris /etc/localtime
 fi
 
-# Préparation des prérequis
-if [ "$(ping -q -c1 8.8.8.8)" && "$(ping -q -c1 www.google.com)" ]; then
-    echo "Veuillez vous assurer que vous ayez une connexion internet"
+# preparation boot
+mkinitcpio -p linux
+syslinux-install_update -iam
+passwd
+
+
+# teste internet
+ping -q -c1 www.google.com >/dev/null 2>&1
+if [ $? -eq 1 ]; then
+    echo "Veuillez vous assurer que vous ayez une connexion internet et le DNS configuré"
     return
 fi
 
-grep archlinuxfr /etc/pacman.conf
+grep archlinuxfr /etc/pacman.conf >/dev/null 2>&1
 if [ $? -eq 1 ]; then
     echo "[archlinuxfr]" >> /etc/pacman.conf
-    echo "Server = http://repo.archlinuxfr/$arch" >> /etc/pacman.conf
+    echo "Server = http://repo.archlinux.fr/\$arch" >> /etc/pacman.conf
 fi
 
 PKG=""
 add_pkg yaourt wget git
+add_pkg sudo openssh
 add_pkg net-tools
 pacman -Syu
 install_pkg
 
-# Chargement du dotfiles
+
+
+# la suite
 if [ ! -d ~/dotfiles ]; then
-    cd
-    git clone git@github.com:badele/dotfiles.git
-else
-    git pull
+        echo "Creez un utilisateur avec la commade suivante"
+        echo "useradd -g users -m -s /bin/bash archuser"
+        echo "passwd archuser"
+        echo ""
+        echo "en mode utilisateur, vous pouvez executer la commande ci-dessous"
+        echo "git clone git@github.com:badele/dotfiles.git"
+        echo "puis executer source sync_environnement"
 fi
-echo "Vous pouvez maintenant utiliser sync_environnement"
