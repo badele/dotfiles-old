@@ -21,7 +21,7 @@ rsync -avr --exclude ".git/" --cvs-exclude $DEPOT/user/ ~/
 add_pkg tmux zsh screenfetch-git rxvt-unicode terminus-font
 
 # Environement X
-add_pkg xf86-input-synaptics xorg-xev xorg-xprop xorg-xrdb slim slim-themes gksu arandr
+add_pkg xf86-input-synaptics xorg-xinit xorg-xev xorg-xprop xorg-xrdb slim slim-themes gksu arandr
 
 # Multimedia
 add_pkg alsa-utils
