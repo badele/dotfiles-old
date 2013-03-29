@@ -66,7 +66,7 @@ if [ $? -eq 1 ]; then
 fi
 
 PKG=""
-add_pkg yaourt wget git
+add_pkg yaourt wget git rsync
 add_pkg sudo openssh
 add_pkg net-tools
 pacman -Syu
