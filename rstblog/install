@@ -10,3 +10,13 @@ fi
 
 mkvirtualenv --no-site-packages -p python2.7 rstblog
 pip install -r ~/dotfiles/rstblog/requirements.txt 
+
+# Récupération des sources
+cd ~/projets
+git clone git@github.com:badele/rstblog.git
+cd ~/projets/rstblog
+
+# Installation
+python2 setup.py install
+#cp -r rstblog/templates $VIRTUAL_ENV/lib/python2.7/site-packages/rstblog/
+
