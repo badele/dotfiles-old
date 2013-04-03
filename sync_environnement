@@ -45,7 +45,7 @@ add_pkg zathura zathura-pdf-mupdf
 add_pkg wicd wicd-gtk
 add_pkg volumeicon
 add_pkg gigolo
-add_pkg clipit
+add_pkg parcellite
 add_pkg feh
 
 install_pkg
