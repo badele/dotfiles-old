@@ -1,6 +1,12 @@
 #!/bin/bash
 
-epylint "$1" 2>/dev/null
-#pyflakes "$1"
-pep8 --ignore=E221,E701,E202 --repeat "$1"
+FILE=$1
+
+# Test if folder exist
+if [ ! -e "$FILE" ]; then
+FILE="/$1"
+fi
+
+epylint "$FILE" 2>/dev/null
+pep8 --ignore=E221,E701,E202 --repeat "$FILE"
 true
