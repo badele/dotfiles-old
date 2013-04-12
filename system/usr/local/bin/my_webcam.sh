@@ -17,10 +17,8 @@ webcam () {
     xdotool key --delay $TKEY ctrl+h 
 }
 
-# Lancement d'un terminal avec glances
+# Lancement d'un terminal
 xdotool key --delay $TKEY super+Return
-xdotool type "glances"
-xdotool key --delay $TKEY Return
 
 # Lancement des webcams
 xdotool key --delay $TKEY super+h
@@ -29,4 +27,9 @@ xdotool key --delay $TKEY super+v
 webcam 8082
 webcam 8083
 xdotool key --delay $TKEY super+r Left Left Escape
+
+# Lancement de glance
+xdotool key --delay $TKEY super+Left
+xdotool type "glances"
+xdotool key --delay $TKEY Return
 
