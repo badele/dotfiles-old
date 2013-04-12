@@ -30,6 +30,7 @@
         color-theme-solarized
         graphviz-dot-mode
         pkgbuild-mode
+        smex
         ))				
 
 ;; Mise a jours des paquets
@@ -77,7 +78,13 @@
 (ido-mode t) ;; Ameliore la recherche buffer, fichier, repertoire
 
 (show-paren-mode t) ;; Affiche les parentheses
- 
+
+;; Remplace le lanceur de commande (M-x)
+(global-set-key (kbd "M-x") 'smex)
+(global-set-key (kbd "M-X") 'smex-major-mode-commands)
+;; This is your old M-x.
+(global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
+
 ;; Completion du code
 (require 'auto-complete-config)
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
@@ -89,6 +96,8 @@
 
 ;; Redefinition des touches
 (global-set-key [ (control c) (control g) ] 'goto-line);; Aller a la ligne / C-c C-g
+
+(global-set-key [f8] 'flymake-goto-next-error) ;; Touche multimedia >>|
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
