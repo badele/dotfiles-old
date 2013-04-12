@@ -31,6 +31,7 @@
         graphviz-dot-mode
         pkgbuild-mode
         smex
+        projectile
         ))				
 
 ;; Mise a jours des paquets
@@ -79,11 +80,6 @@
 
 (show-paren-mode t) ;; Affiche les parentheses
 
-;; Remplace le lanceur de commande (M-x)
-(global-set-key (kbd "M-x") 'smex)
-(global-set-key (kbd "M-X") 'smex-major-mode-commands)
-;; This is your old M-x.
-(global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
 
 ;; Completion du code
 (require 'auto-complete-config)
@@ -94,10 +90,6 @@
 (setq-default indent-tabs-mode nil)    ; use only spaces and no tabs
 (setq default-tab-width 4)
 
-;; Redefinition des touches
-(global-set-key [ (control c) (control g) ] 'goto-line);; Aller a la ligne / C-c C-g
-
-(global-set-key [f8] 'flymake-goto-next-error) ;; Touche multimedia >>|
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -117,8 +109,6 @@
 (setq ropemacs-enable-autoimport t)
 
 ;; Flymake
-(global-set-key [f8] 'flymake-goto-next-error) ;; Touche multimedia >>|
-(global-set-key [f6] 'flymake-goto-prev-error) ;; Touche multimedia |<<
 (when (load "flymake" t)
   (defun flymake-pyflakes-init ()
     (let* ((temp-file (flymake-init-create-temp-buffer-copy
@@ -150,3 +140,20 @@
 (setq org-agenda-files (list "/data/document/home.org"
                              "/data/document/work.org"))
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Global Key
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; Smex, remplace le lanceur de commande (M-x)
+(global-set-key (kbd "M-x") 'smex)
+(global-set-key (kbd "M-X") 'smex-major-mode-commands)
+;; This is your old M-x.
+(global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
+
+;; flymake, Redefinition des touches
+(global-set-key [f8] 'flymake-goto-next-error) ;; Touche multimedia >>|
+(global-set-key [f6] 'flymake-goto-prev-error) ;; Touche multimedia |<<
+(global-set-key [ (control c) (control g) ] 'goto-line);; Aller a la ligne / C-c C-g
+
+;; Divers
+(global-set-key [f10] 'menu-bar-mode) ;; Affiche ou désactive Touche multimedia >>|
