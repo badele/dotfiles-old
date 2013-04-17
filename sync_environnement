@@ -40,12 +40,11 @@ add_pkg xchat
 add_pkg mc
 
 # Alternative legere
-add_pkg spacefm udevil cifs-utils
+add_pkg spacefm cifs-utils gigolo
 add_pkg zathura zathura-pdf-mupdf
 add_pkg wicd wicd-gtk
 add_pkg volumeicon
 add_pkg parcellite
-add_pkg gigolo
 add_pkg feh
 
 install_pkg
