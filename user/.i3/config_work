@@ -114,7 +114,7 @@ workspace "7: Web" output DVI-0
 # switch to workspace
 bindsym $mod+ampersand workspace "1: Term"
 bindsym $mod+eacute workspace "2: Editor"
-bindsym $mod+quotedbl workspace "3: Misc 3"
+bindsym $mod+quotedbl workspace "3: Misc"
 bindsym $mod+apostrophe workspace "4: Misc 4"
 bindsym $mod+parenleft workspace "5: Term"
 bindsym $mod+minus workspace "6: Editor"
@@ -126,11 +126,11 @@ bindsym $mod+agrave workspace 10
 # move focused container to workspace
 bindsym $mod+Shift+ampersand move container to workspace "1: Term"
 bindsym $mod+Shift+eacute move container to workspace "2: Editor"
-bindsym $mod+Shift+quotedbl move container to workspace "7: Web"
+bindsym $mod+Shift+quotedbl move container to workspace "3: Misc"
 bindsym $mod+Shift+apostrophe move container to workspace "4: Misc"
 bindsym $mod+Shift+5 move container to workspace "5: Term"
-bindsym $mod+Shift+minus move container to workspace 6
-bindsym $mod+Shift+egrave move container to workspace 7
+bindsym $mod+Shift+minus move container to workspace "6: Editor"
+bindsym $mod+Shift+egrave move container to workspace "7: Web"
 bindsym $mod+Shift+underscore move container to workspace 8
 bindsym $mod+Shift+ccedilla move container to workspace 9
 bindsym $mod+Shift+agrave move container to workspace 10
