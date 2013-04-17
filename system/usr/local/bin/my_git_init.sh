@@ -27,6 +27,7 @@ if [ ! -d ~/projets/$PRJ ]; then
 
 	echo ""
 	echo "[Optionnel] git clone $DST:$PRJ.git"
+	echo "[Optionnel] git remote add github git@github.com:badele/$PRJ.git"
 else
 	echo "le projet existe déja !"
 fi
