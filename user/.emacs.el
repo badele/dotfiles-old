@@ -18,7 +18,7 @@
         magit
         auto-complete
         yasnippet
-        pymacs
+        ;;pymacs
         rope
         ropemode
         ropemacs
@@ -51,7 +51,7 @@
 
 ;; Pas de menu & toolbar 
 (tool-bar-mode -1) 
-(menu-bar-mode -1)
+;;(menu-bar-mode -1)
 
 ;; Numerotation des lignes
 (global-linum-mode t);; Numerotation des lignes à gauche du code
@@ -98,15 +98,15 @@
 
 
 ;; Pymacs (python 2.7)
-(autoload 'pymacs-apply "pymacs")
-(autoload 'pymacs-call "pymacs")
-(autoload 'pymacs-eval "pymacs" nil t)
-(autoload 'pymacs-exec "pymacs" nil t)
-(autoload 'pymacs-load "pymacs" nil t)
+;; (autoload 'pymacs-apply "pymacs")
+;; (autoload 'pymacs-call "pymacs")
+;; (autoload 'pymacs-eval "pymacs" nil t)
+;; (autoload 'pymacs-exec "pymacs" nil t)
+;; (autoload 'pymacs-load "pymacs" nil t)
 
 ;; Rope
-(pymacs-load "ropemacs" "rope-")
-(setq ropemacs-enable-autoimport t)
+;; (pymacs-load "ropemacs" "rope-")
+;; (setq ropemacs-enable-autoimport t)
 
 ;; Flymake
 (when (load "flymake" t)
