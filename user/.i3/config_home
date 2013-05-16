@@ -185,3 +185,4 @@ exec --no-startup-id parcellite
 exec --no-startup-id firefox
 #exec --no-startup-id xchat
 #for_window [class="Nautilus" instance="file_progress"] floating enable
+for_window [class="Skype" instance="skype"] floating enable
