@@ -4,8 +4,6 @@
 
 export EDITOR="nano"
 
-/usr/bin/screenfetch
-
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
