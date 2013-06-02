@@ -41,6 +41,7 @@ unsetopt correct_all
 
 # Customize to your needs...
 # # Virtualenv wrapper
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python2
 export WORKON_HOME=~/.virtualenvs
 mkdir -p $WORKON_HOME
 . virtualenvwrapper.sh
