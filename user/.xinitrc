@@ -19,13 +19,13 @@ case $1 in
   i3)
     exec i3 -V >> /tmp/i3log 2>&1
     ;;
-  xfce4)
+  xfce4|*)
     exec startxfce4
     ;;
-  *)
-    #udiskie &
-    exec dbus-launch --exit-with-session  $DEFAULT_SESSION &
-    ;;
+  # *)
+  #   #udiskie &
+  #   exec dbus-launch --exit-with-session  $DEFAULT_SESSION &
+  #   ;;
 esac
 
 wait $wmpid
