@@ -1,0 +1,5 @@
+#!/bin/bash
+
+killall xfdekstop
+killall xfwm4
+exec i3
