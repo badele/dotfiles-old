@@ -7,10 +7,12 @@
         <property name="image-path" type="string" value="/usr/share/xfce4/backdrops/Albatross.png"/>
         <property name="last-image" type="string" value="/usr/share/xfce4/backdrops/Albatross.png"/>
         <property name="last-single-image" type="string" value="/usr/share/xfce4/backdrops/Albatross.png"/>
+        <property name="color-style" type="int" value="0"/>
       </property>
     </property>
   </property>
   <property name="desktop-icons" type="empty">
     <property name="icon-size" type="uint" value="32"/>
+    <property name="show-thumbnails" type="bool" value="true"/>
   </property>
 </channel>

@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=0.9.4
+Type=Application
+Name=autolock
+Comment=lock screen after x minutes
+Exec=xautolock -time 5 -locker "i3lock  -i /usr/share/backgrounds/Albatross.png"
+OnlyShowIn=XFCE;
+StartupNotify=false
+Terminal=false
+Hidden=false
+
