@@ -1,29 +1,30 @@
 #!/bin/bash
 
 DST=git@192.168.253.53
-PRJ=$1
+DISK=$1
+PRJ=$2
 
 if [ "$PRJ" == "" ]; then
-	echo "veuillez saisir un nom de projet"
+	echo "veuillez saisir un montage ZFS et un nom de projet"
 	exit
 fi
 
-if [ ! -d ~/projets/$PRJ ]; then
+if [ ! -d /$DISK/projects/$PRJ ]; then
 	# Creation du repertoire
-	mkdir ~/projets/$PRJ
-	cd ~/projets/$PRJ
+	mkdir /$DISK/projects/$PRJ
+	cd /$DISK/projects/$PRJ
 
 	# Création du repository
 	git init
-	cd ~/projets
+	cd /$DISK/projects
 
 	# Clone et copie du repository vers le depot local
 	git clone --bare $PRJ $PRJ.git
-	scp -r ~/projets/$PRJ.git $DST:
+	scp -r /$DISK/projects/$PRJ.git $DST:
 
 	# Suppression des projet temporaire
-	rm -r ~/projets/$PRJ
-	rm -r ~/projets/$PRJ.git
+	rm -r /$DISK/projects/$PRJ
+	rm -r /$DISK/projects/$PRJ.git
 
 	echo ""
 	echo "[Optionnel] git clone $DST:$PRJ.git"
@@ -31,7 +32,3 @@ if [ ! -d ~/projets/$PRJ ]; then
 else
 	echo "le projet existe déja !"
 fi
-
-
-
-
