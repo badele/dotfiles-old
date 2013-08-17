@@ -32,7 +32,3 @@ if [ ! -d /$DISK/projects/$PRJ ]; then
 else
 	echo "le projet existe déja !"
 fi
-
-
-
-
