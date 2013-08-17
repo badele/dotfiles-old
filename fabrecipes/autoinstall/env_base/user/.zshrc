@@ -16,6 +16,7 @@ ZSH_THEME="rkj"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias prj_fabrecipe="workon fabtools && cd /USB_140/projects/fabrecipes/fabrecipes"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
