@@ -1,0 +1,8 @@
+[user]
+        name = badele
+        email = bruno.adele@jesuislibre.org
+[credential]
+        helper = cache --timeout=3600
+[push]
+        default = simple
+
