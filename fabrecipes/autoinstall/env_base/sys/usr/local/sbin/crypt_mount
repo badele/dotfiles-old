@@ -1,5 +1,4 @@
 #!/usr/bin/bash
-sudo zpool export BACKUP ; sudo cryptsetup luksOpen /dev/disk/by-uuid/4a2ff78d-8940-4ab8-8227-c997468ea34f backup ; sudo zpool import -f BACKUP
+sudo zpool export BACKUP ; sudo cryptsetup luksOpen /dev/disk/by-uuid/f6f11689-ed0a-4a89-8da5-eeb53c799d55 backup ; sudo zpool import -f BACKUP
 sudo zpool export LIVE ; sudo cryptsetup luksOpen /dev/disk/by-uuid/c892c3c2-dc97-4617-a0e7-b364424c7e70 live ; sudo zpool import -f LIVE
-sudo zpool export MAXI ; sudo cryptsetup luksOpen /dev/disk/by-uuid/f6f11689-ed0a-4a89-8da5-eeb53c799d55 maxi ; sudo zpool import -f MAXI
 
