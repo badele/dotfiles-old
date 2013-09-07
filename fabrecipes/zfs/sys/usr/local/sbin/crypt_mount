@@ -1,0 +1,19 @@
+#!/usr/bin/bash
+mount_zfs()
+{
+    POOL=$1
+    UUID=$2
+
+    sudo mountpoint -q /$POOL
+    if [ $? -eq 1 ]; then
+        echo "Try to mount $POOL"
+        sudo zpool export $POOL
+        sudo cryptsetup luksOpen /dev/disk/by-uuid/$UUID LUKS-$POOL
+        sudo zpool import -f $POOL
+    else
+        echo "$POOL already mounted"
+    fi
+}
+
+mount_zfs LIVE c892c3c2-dc97-4617-a0e7-b364424c7e70
+mount_zfs BACKUP f6f11689-ed0a-4a89-8da5-eeb53c799d55

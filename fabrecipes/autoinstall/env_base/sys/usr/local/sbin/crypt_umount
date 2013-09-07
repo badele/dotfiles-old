@@ -1,4 +1,0 @@
-#!/usr/bin/bash
-sudo zpool export BACKUP ; sudo cryptsetup luksClose backup
-sudo zpool export LIVE ; sudo cryptsetup luksClose live
-

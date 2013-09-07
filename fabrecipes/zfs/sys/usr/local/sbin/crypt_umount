@@ -1,0 +1,18 @@
+#!/usr/bin/bash
+
+umount_zfs()
+{
+    POOL=$1
+
+    sudo mountpoint -q /$POOL
+    if [ $? -eq 0 ]; then
+        echo "Try to umount $POOL"
+        sudo zpool export $POOL
+        sudo cryptsetup luksClose LUKS-$POOL
+    else
+        echo "$POOL not mounted"
+    fi
+}
+
+umount_zfs BACKUP
+umount_zfs LIVE
