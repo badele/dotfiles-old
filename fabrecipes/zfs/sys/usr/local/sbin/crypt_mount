@@ -6,7 +6,7 @@ mount_zfs()
 
     sudo mountpoint -q /$POOL
     if [ $? -eq 1 ]; then
-        echo "Try to mount $POOL"
+        echo "Try to mount $POOL($UUID)"
         sudo zpool export $POOL
         sudo cryptsetup luksOpen /dev/disk/by-uuid/$UUID LUKS-$POOL
         sudo zpool import -f $POOL
