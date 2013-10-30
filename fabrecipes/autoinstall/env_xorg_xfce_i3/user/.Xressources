@@ -1,0 +1,29 @@
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! XTerm
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+XTerm*font: 9x15
+XTerm*saveLines: 1000
+XTerm*HiForeColor: white
+XTerm*HiBackColor: #c06077
+XTerm*geometry: +50+100
+XTerm.font: -*-terminus-medium-r-*-*-14-*-*-*-*-*-*-*
+
+! Colors
+XTerm*Background:  #101010
+XTerm*Foreground: #d0d0d0
+XTerm*color0: #101010
+XTerm*color1: #960050
+XTerm*color2: #66aa11
+XTerm*color3: #c47f2c
+XTerm*color4: #30309b
+XTerm*color5: #7e40a5
+XTerm*color6: #3579a8
+XTerm*color7: #9999aa
+XTerm*color8: #303030
+XTerm*color9: #ff0090
+XTerm*color10: #80ff00
+XTerm*color11: #ffba68
+XTerm*color12: #5f5fee
+XTerm*color13: #bb88dd
+XTerm*color14: #4eb4fa
+XTerm*color15: #d0d0d0
