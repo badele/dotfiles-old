@@ -106,8 +106,8 @@ bindsym $mod+control+Right workspace next
 
 # switch to workspace
 bindsym $mod+ampersand workspace "1: Term"
-bindsym $mod+eacute workspace "2: Editor"
-bindsym $mod+quotedbl workspace "3: Web"
+bindsym $mod+eacute workspace "2: Web"
+bindsym $mod+quotedbl workspace "3: Editor"
 bindsym $mod+apostrophe workspace "4: Misc"
 bindsym $mod+parenleft workspace 5
 bindsym $mod+minus workspace 6
@@ -118,8 +118,8 @@ bindsym $mod+agrave workspace 10
 
 # move focused container to workspace
 bindsym $mod+Shift+ampersand move container to workspace "1: Term"
-bindsym $mod+Shift+eacute move container to workspace "2: Editor"
-bindsym $mod+Shift+quotedbl move container to workspace "3: Web"
+bindsym $mod+Shift+eacute move container to workspace "2: Web"
+bindsym $mod+Shift+quotedbl move container to workspace "3: Editor"
 bindsym $mod+Shift+apostrophe move container to workspace "4: Misc"
 bindsym $mod+Shift+5 move container to workspace 5
 bindsym $mod+Shift+minus move container to workspace 6
@@ -172,9 +172,9 @@ bar {
 #focus_follows_mouse no
 new_window pixel 1
 new_float pixel 1
-assign [class="Gvim"] → "2: Editor"
-assign [class="Emacs"] → "2: Editor"
-assign [class="Firefox"] → "3: Web"
+assign [class="Gvim"] → "3: Editor"
+assign [class="Emacs"] → "3: Editor"
+assign [class="Firefox"] → "2: Web"
 assign [class="Xchat"] → "4: Misc"
 # exec --no-startup-id xautolock -time 20 -locker "i3lock -c 331111"
 # exec --no-startup-id feh --bg-scale ~/.i3/archlinux.png
