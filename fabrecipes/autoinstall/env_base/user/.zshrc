@@ -21,6 +21,7 @@ alias prj_blogjsl="workon pelican && cd /LIVE/projects/blog.jesuislibre.org"
 alias prj_badim="workon pelican && cd /LIVE/projects/bruno.adele.im"
 alias prj_cacause="workon cacause && cd /LIVE/projects/cacause"
 alias prj_jobcatcher="workon jobcatcher && cd /LIVE/projects/JobCatcher"
+alias prj_githubsum="workon githubsum && cd /LIVE/projects/github-summary"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
