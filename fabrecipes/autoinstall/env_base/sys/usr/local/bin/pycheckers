@@ -10,5 +10,5 @@ FILE=`realpath $FILE`
 
 pyflakes "$FILE"
 epylint "$FILE" 2>/dev/null
-pep8 --ignore=E221,E701,E202 --repeat "$FILE"
+pep8 --ignore=E401,E221,E701,E202 --max-line-length=140 --repeat "$FILE"
 true
