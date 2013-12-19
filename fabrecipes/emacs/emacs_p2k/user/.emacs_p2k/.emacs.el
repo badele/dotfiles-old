@@ -161,4 +161,5 @@
 (global-set-key [ (control c) (control g) ] 'goto-line);; Aller a la ligne / C-c C-g
 
 ;; Divers
-(global-set-key [f10] 'menu-bar-mode) ;; Affiche ou désactive Touche multimedia >>|
+(global-set-key [f10] 'menu-bar-open) ;; 
+(global-set-key [f11] 'menu-bar-mode) ;; Affiche ou désactive Touche multimedia >>|
