@@ -1,6 +1,6 @@
 # If not running interactively, do not do anything
 [[ $- != *i* ]] && return
-# [[ -z "$TMUX" ]] && exec tmux
+#[[ -z "$TMUX" ]] && exec tmux
 
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
@@ -16,12 +16,21 @@ ZSH_THEME="rkj"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias prj_fabrecipe="workon fabtools && cd /LIVE/projects/fabrecipes/fabrecipes"
-alias prj_blogjsl="workon pelican && cd /LIVE/projects/blog.jesuislibre.org"
-alias prj_badim="workon pelican && cd /LIVE/projects/bruno.adele.im"
-alias prj_cacause="workon cacause && cd /LIVE/projects/cacause"
-alias prj_jobcatcher="workon jobcatcher && cd /LIVE/projects/JobCatcher"
-alias prj_githubsum="workon githubsum && cd /LIVE/projects/github-summary"
+alias prj_fabrecipe="workon fabtools && ~/docshare/projects/fabrecipes/fabrecipes"
+alias prj_blogjsl="workon pelican && ~/docshare/projects/blog.jesuislibre.org"
+alias prj_badim="workon pelican && ~/docshare/projects/bruno.adele.im"
+alias prj_cacause="workon cacause && ~/docshare/projects/cacause"
+alias prj_jobcatcher="workon jobcatcher && ~/docshare/projects/JobCatcher"
+alias prj_githubsum="workon githubsum && ~/docshare/projects/github-summary"
+alias prj_serialkiller="workon serialkiller && ~/docshare/projects/serialkiller/serialkiller"
+alias prj_pysdrscan="workon pysdrscan && ~/docshare/projects/pysdrscan/pysdrscan"
+alias ssh_domotique="ssh root@192.168.253.58"
+alias ssh_washroom="ssh pi@192.168.253.26"
+alias ssh_tts="ssh root@192.168.253.34"
+alias ssh_p03="ssh root@192.168.253.50"
+alias ssh_video="ssh root@192.168.253.33"
+alias ssh_p01="ssh root@p01.mon-vpn.com"
+alias ssh_backup="ssh root@192.168.253.53"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -53,9 +62,17 @@ unsetopt correct_all
 # # Virtualenv wrapper
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python2
 export WORKON_HOME=~/.virtualenvs
+export PROJECT_ROOT=~/docshare/projects
 mkdir -p $WORKON_HOME
 . virtualenvwrapper.sh
 
 if [ -d ~/.local/bin ]; then
   export PATH=~/.local/bin:$PATH
 fi
+
+if [ -d /opt/android-studio/bin ]; then
+  export PATH=/opt/android-studio/bin:$PATH
+fi
+
+export SERIALKILLER_SETTINGS=/etc/sk_config.cfg
+export EDITOR="nano"
