@@ -11,7 +11,7 @@ ZSH=$HOME/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 #ZSH_THEME="af-magic"
 #ZSH_THEME="random"
-ZSH_THEME="rkj"
+ZSH_THEME="blinks"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
