@@ -44,6 +44,10 @@
 !
 ! URxvt*background:            S_base03
 
+! URxvt
+urxvt*scrollBar:          false
+
+
 *background:              S_base03
 *foreground:              S_base0
 *fading:                  40

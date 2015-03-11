@@ -40,7 +40,7 @@ bindsym XF86AudioMute exec amixer -q set Master toggle
 
 
 # start a terminal
-bindsym $mod+Return exec xterm
+bindsym $mod+Return exec urxvt
 
 # kill focused window
 bindsym $mod+q kill
