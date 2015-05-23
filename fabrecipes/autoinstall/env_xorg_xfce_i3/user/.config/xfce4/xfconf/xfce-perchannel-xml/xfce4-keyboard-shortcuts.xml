@@ -25,7 +25,7 @@
       <property name="override" type="bool" value="true"/>
       <property name="&lt;Primary&gt;Escape" type="string" value="xfdesktop --menu"/>
       <property name="&lt;Primary&gt;Return" type="string" value="xfce4-terminal"/>
-      <property name="&lt;Primary&gt;&lt;Alt&gt;l" type="string" value="i3lock -i ~/.i3/archlinux.png"/>
+      <property name="&lt;Primary&gt;&lt;Alt&gt;l" type="string" value="i3lock -i /usr/local/share/archlinux.png"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">
