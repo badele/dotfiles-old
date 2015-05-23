@@ -1,7 +1,0 @@
-pyyaml
-babel
-blinker
-docutils
-jinja2
-werkzeug
-pygments
