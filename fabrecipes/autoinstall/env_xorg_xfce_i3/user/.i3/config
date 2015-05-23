@@ -183,8 +183,9 @@ assign [class="Xchat"] → "4: Misc"
 # exec --no-startup-id synclient touchpadoff=1
 # exec --no-startup-id volumeicon
 # exec --no-startup-id parcellite
-exec --no-startup-id my_emacs_p2k
 exec --no-startup-id firefox
+exec --no-startup-id feh --bg-scale /usr/share/xfce4/backdrops/Albatross.png
+#exec --no-startup-id my_emacs_p2k
 #for_window [class="Nautilus" instance="file_progress"] floating enable
 for_window [class="Skype" instance="skype"] floating enable
 for_window [class="VirtualBox" instance="Qt-subapplication"] floating enable
