@@ -183,7 +183,7 @@ assign [class="Xchat"] → "4: Misc"
 # exec --no-startup-id volumeicon
 # exec --no-startup-id parcellite
 exec --no-startup-id firefox
-exec --no-startup-id feh --bg-scale ~/.i3/archlinux.png
+exec --no-startup-id feh --bg-fill ~/.i3/archlinux.png
 #exec --no-startup-id my_emacs_p2k
 #for_window [class="Nautilus" instance="file_progress"] floating enable
 for_window [class="Skype" instance="skype"] floating enable
