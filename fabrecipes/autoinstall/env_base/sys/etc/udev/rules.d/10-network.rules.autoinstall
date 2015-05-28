@@ -1,0 +1,2 @@
+# Please set your MAC Adress interfaces
+SUBSYSTEM=="net", ACTION=="add", ATTR{address}=="aa:bb:cc:dd:ee:ff", NAME="net0"
