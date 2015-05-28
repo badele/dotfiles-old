@@ -53,7 +53,7 @@ alias ssh_backup="ssh root@192.168.253.53"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git virtualenvwrapper )
+plugins=(git virtualenvwrapper cp docker python colored-man)
 
 # # Virtualenv wrapper
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python2
