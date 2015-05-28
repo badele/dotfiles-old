@@ -1,5 +1,5 @@
 Description='A basic dhcp ethernet connection'
-Interface=eno1
+Interface=net0
 Connection=ethernet
 IP=dhcp
 #DHCPClient=dhcpcd
